@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class ProfileImage extends StatelessWidget {
   const ProfileImage(
       {super.key, this.top, this.left, this.diameter, this.image});
-
   final double? top;
   final double? left;
   final double? diameter;
@@ -18,11 +17,11 @@ class ProfileImage extends StatelessWidget {
         height: diameter,
         width: diameter,
         child: ClipRRect(
+          borderRadius: BorderRadius.circular(300.0),
           child: Image.network(
             image.toString(),
             fit: BoxFit.cover,
           ),
-          borderRadius: BorderRadius.circular(300.0),
         ),
       ),
     );
